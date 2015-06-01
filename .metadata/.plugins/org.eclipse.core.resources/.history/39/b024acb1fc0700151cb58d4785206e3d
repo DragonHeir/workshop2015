@@ -1,0 +1,24 @@
+import javax.swing.JOptionPane;
+
+
+public class guesstheanimal
+{
+public static void main(String[] args)
+{
+	boolean isWeekday, isVacation;
+	int day = JOptionPane.showConfirmDialog(null, "Does it have four legs?", "", JOptionPane.YES_NO_OPTION);
+	if (day == JOptionPane.YES_OPTION)
+	{
+		JOptionPane.showMessageDialog(null, "It's a pig");
+	}
+	
+	if (day == JOptionPane.NO_OPTION)
+	{
+		JOptionPane.showMessageDialog(null, "It's a monkey");
+	}
+}
+}
+
+//1. ask user if it has 4 legs. if yes, it’s a pig if no, it’s a monkey 
+//2. add zebra, pig, monkey, bird,
+//3. add fish and spider.
