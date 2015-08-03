@@ -1,0 +1,24 @@
+package Level_1;
+
+import javax.swing.JFrame;
+
+public class Gui_intro
+{
+	JFrame Window1;
+	JFrame Window2;
+	
+	public static void main(String[] args)
+	{
+	Gui_intro g = new Gui_intro();
+	}
+	public Gui_intro()
+	{
+		//Window setup code
+		Window1 = new JFrame();
+		Window1.setVisible(true);
+		Window1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Window1.setSize(1920, 1080);
+		
+	}
+}
+

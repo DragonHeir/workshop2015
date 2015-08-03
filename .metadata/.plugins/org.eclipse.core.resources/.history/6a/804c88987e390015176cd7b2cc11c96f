@@ -1,0 +1,34 @@
+package Level_1;
+
+import java.awt.Panel;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Gui_intro
+{
+	//Panels go into the Frames
+	JFrame Frame1;
+	JPanel Panel1;
+	JButton Button1;
+	
+	public static void main(String[] args)
+	{
+	Gui_intro g = new Gui_intro();
+	}
+	public Gui_intro()
+	{
+		//Window setup code
+		Frame1 = new JFrame();
+		Frame1.setVisible(true);
+		Frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Frame1.setSize(1920, 1080);
+	
+		Panel1 = new JPanel();
+		Button1= new JButton("useless button");
+		Panel1.add(Button1);
+		Frame1.add(Panel1);
+	}
+}
+
