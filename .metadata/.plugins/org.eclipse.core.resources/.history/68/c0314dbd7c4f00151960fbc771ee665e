@@ -1,0 +1,49 @@
+package Level_1;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Generator implements ActionListener
+{
+
+	JFrame GenFrame;
+	JPanel GenPanel;
+	JLabel Sides;
+	JLabel SideLength;
+	JLabel PenSize;
+	JLabel PenColor;
+	JLabel Speed;
+
+	public static void main(String[] args)
+	{
+		Generator g = new Generator();
+	}
+
+	public Generator()
+	{
+		GenFrame = new JFrame();
+		GenFrame.setVisible(true);
+		GenFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		GenFrame.setSize(300, 200);
+		GenFrame.add(GenPanel);
+		GenPanel.add(Sides);
+		GenPanel.add(SideLength);
+		GenPanel.add(PenSize);
+		GenPanel.add(PenColor);
+		GenPanel.add(Speed);
+		
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+}
