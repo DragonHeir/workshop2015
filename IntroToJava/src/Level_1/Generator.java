@@ -9,8 +9,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import org.jointheleague.graphical.robot.Robot;
-
 public class Generator implements ActionListener
 {
 
@@ -71,7 +69,7 @@ public class Generator implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
-		Robot bobby = new Robot();
+
 	}
 
 }
