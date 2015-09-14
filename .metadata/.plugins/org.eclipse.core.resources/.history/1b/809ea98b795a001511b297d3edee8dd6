@@ -1,0 +1,11 @@
+package Level_1;
+
+public class StringFun
+{
+	public static void main(String[] args)
+	{
+		String name = "Evan";
+				
+		System.out.println(name.charAt(1));
+	}
+}
