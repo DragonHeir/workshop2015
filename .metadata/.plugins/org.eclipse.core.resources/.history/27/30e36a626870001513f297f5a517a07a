@@ -1,0 +1,31 @@
+package Level_1;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Photobook
+{
+	JFrame frame = new JFrame();
+	JPanel book = new JPanel();
+	JButton next = new JButton();
+	JButton prev = new JButton();
+	JButton rand = new JButton();
+
+	public static void main(String[] args)
+	{
+		Photobook p = new Photobook();
+	}
+
+	Photobook()
+	{
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(300, 300);
+		frame.add(book);
+		book.add(next);
+		book.add(prev);
+		book.add(rand);
+
+	}
+}

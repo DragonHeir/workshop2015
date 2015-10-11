@@ -1,0 +1,22 @@
+package Level_1;
+
+import javax.swing.JFrame;
+
+public class Photobook
+{
+	JFrame frame = new JFrame();
+	Imagepanel i = new Imagepanel("up.jpg");
+
+	public static void main(String[] args)
+	{
+		Photobook p = new Photobook();
+	}
+
+	Photobook()
+	{
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(i);
+		frame.pack();
+	}
+}
