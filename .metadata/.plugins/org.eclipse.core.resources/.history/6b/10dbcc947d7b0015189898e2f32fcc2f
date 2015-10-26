@@ -1,0 +1,51 @@
+package Level_1;
+
+import org.jointheleague.graphical.robot.Robot;
+
+public class face
+{
+	public static void main(String[] args)
+	{
+		face a = new face();
+	}
+
+	face()
+	{
+		Robot a = new Robot();
+		a.setSpeed(10);
+		a.penDown();
+		eyes(a);
+		nose(a);
+		mouth(a);
+	}
+
+	void eyes(Robot a)
+	{
+		for (int i = 0; i < 360; i++)
+		{
+			a.move(1);
+			a.turn(1);
+		}
+		for (int i = 0; i < -360; i++)
+		{
+			a.move(-1);
+			a.turn(-1);
+		}
+	}
+
+	void nose(Robot a)
+	{
+		for (int i = 0; i < 0; i++)
+		{
+
+		}
+	}
+
+	void mouth(Robot a)
+	{
+		for (int i = 0; i < 0; i++)
+		{
+
+		}
+	}
+}
