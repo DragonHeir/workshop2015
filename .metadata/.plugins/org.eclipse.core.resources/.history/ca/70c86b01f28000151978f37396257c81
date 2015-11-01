@@ -1,0 +1,159 @@
+package Level_1;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Random;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class DungeonsAndDragonsDice implements ActionListener
+{
+	JFrame Frame;
+	JPanel Panel;
+	JLabel LastRoll;
+	JLabel Total;
+	JLabel LastRollNum;
+	JLabel TotalNum;
+	JButton FourDice;
+	JButton SixDice;
+	JButton EightDice;
+	JButton TenDice;
+	JButton TwelveDice;
+	JButton TwentyDice;
+	JButton Clear;
+	int TotalUpdate;
+
+	public static void main(String[] args)
+	{
+		DungeonsAndDragonsDice d = new DungeonsAndDragonsDice();
+	}
+
+	public DungeonsAndDragonsDice()
+	{
+		Frame = new JFrame("D&D Dice Roller");
+		Frame.setVisible(true);
+		Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Frame.setSize(200, 500);
+		Panel = new JPanel();
+		LastRoll = new JLabel("Last Roll:");
+		LastRollNum = new JLabel("0");
+		Total = new JLabel("Total:");
+		TotalNum = new JLabel("0");
+		FourDice = new JButton("4 Sided Dice");
+		FourDice.addActionListener(this);
+		SixDice = new JButton("6 Sided Dice");
+		SixDice.addActionListener(this);
+		EightDice = new JButton("8 Sided Dice");
+		EightDice.addActionListener(this);
+		TenDice = new JButton("10 Sided Dice");
+		TenDice.addActionListener(this);
+		TwelveDice = new JButton("12 Sided Dice");
+		TwelveDice.addActionListener(this);
+		TwentyDice = new JButton("20 Sided Dice");
+		TwentyDice.addActionListener(this);
+		Clear = new JButton("Clear");
+		TotalUpdate = 0;
+
+		Frame.add(Panel);
+		Panel.add(LastRoll);
+		Panel.add(LastRollNum);
+		Panel.add(Total);
+		Panel.add(TotalNum);
+		Panel.add(FourDice);
+		Panel.add(SixDice);
+		Panel.add(EightDice);
+		Panel.add(TenDice);
+		Panel.add(TwelveDice);
+		Panel.add(TwentyDice);
+		Panel.add(Clear);
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		if (e.getSource() == FourDice)
+		{
+			int n = Four();
+			LastRollNum.setText("" + n);
+			TotalUpdate += n;
+		}
+		if (e.getSource() == SixDice)
+		{
+			int n = Six();
+			LastRollNum.setText("" + n);
+			TotalUpdate += n;
+		}
+		if (e.getSource() == EightDice)
+		{
+			int n = Eight();
+			LastRollNum.setText("" + n);
+			TotalUpdate += n;
+		}
+		if (e.getSource() == TenDice)
+		{
+			int n = Ten();
+			LastRollNum.setText("" + n);
+			TotalUpdate += n;
+		}
+		if (e.getSource() == TwelveDice)
+		{
+			int n = Twelve();
+			LastRollNum.setText("" + n);
+			TotalUpdate += n;
+		}
+		if (e.getSource() == TwentyDice)
+		{
+			int n = Twenty();
+			LastRollNum.setText("" + n);
+			TotalUpdate += n;
+		}
+
+	}
+
+	int Four()
+	{
+		Random r = new Random();
+		int f = r.nextInt(4) + 1;
+		return f;
+	}
+
+	int Six()
+	{
+		Random r = new Random();
+		int s = r.nextInt(6) + 1;
+		return s;
+	}
+
+	int Eight()
+	{
+		Random r = new Random();
+		int e = r.nextInt(8) + 1;
+		return e;
+	}
+
+	int Ten()
+	{
+		Random r = new Random();
+		int te = r.nextInt(10) + 1;
+		return te;
+	}
+
+	int Twelve()
+	{
+		Random r = new Random();
+		int tw = r.nextInt(12) + 1;
+		return tw;
+	}
+
+	int Twenty()
+	{
+		Random r = new Random();
+		int twe = r.nextInt(20) + 1;
+		return twe;
+	}
+
+}
