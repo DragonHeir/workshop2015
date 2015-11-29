@@ -85,4 +85,3 @@ public class Buttons implements ActionListener
 		}
 	}
 }
-//completed
