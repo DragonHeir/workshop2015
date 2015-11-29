@@ -1,0 +1,32 @@
+package Level_1;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Buttons
+{
+	public static void main(String[] args)
+	{
+		JFrame Frame = new JFrame("Buttons");
+		JPanel Panel = new JPanel();
+		JButton Up = new JButton("UP");
+		JButton Down = new JButton("DOWN");
+		JButton Left = new JButton("LEFT");
+		JButton Right = new JButton("RIGHT");
+		Frame.setVisible(true);
+		Frame.setSize(100, 100);
+		
+		Buttons x = new Buttons();
+		
+		Up.addActionListener(this);
+		Down.addActionListener(this);
+		Left.addActionListener(this);
+		Right.addActionListener(this);
+	}
+	
+	Buttons()
+	{
+		
+	}
+}
