@@ -1,0 +1,57 @@
+package Level_1;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class TTT
+{
+JFrame Frame;
+JPanel Panel;
+JTextField Field1;
+JTextField Field2;
+JTextField Field3;
+JTextField Field4;
+JTextField Field5;
+JTextField Field6;
+JTextField Field7;
+JTextField Field8;
+JTextField Field9;
+JButton Button;
+public static void main(String[] args)
+{
+	TTT a = new TTT();
+}
+TTT()
+{
+	Frame = new JFrame("Tic Tac Toe");
+	Panel = new JPanel();
+	Field1 = new JTextField();
+	Field2 = new JTextField();
+	Field3 = new JTextField();
+	Field4 = new JTextField();
+	Field5 = new JTextField();
+	Field6 = new JTextField();
+	Field7 = new JTextField();
+	Field8 = new JTextField();
+	Field9 = new JTextField();
+	
+	Frame.add(Panel);
+	Panel.add(Field1);
+	Panel.add(Field2);
+	Panel.add(Field3);
+	Panel.add(Field4);
+	Panel.add(Field5);
+	Panel.add(Field6);
+	Panel.add(Field7);
+	Panel.add(Field8);
+	Panel.add(Field9);
+	Panel.add(Button);
+	
+	Frame.setDefaultCloseOperation(Frame.EXIT_ON_CLOSE);
+	Frame.setVisible(true);
+	Frame.setSize(100, 150);
+	
+}
+}
