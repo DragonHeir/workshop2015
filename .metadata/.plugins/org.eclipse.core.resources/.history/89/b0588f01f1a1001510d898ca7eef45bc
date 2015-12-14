@@ -1,0 +1,36 @@
+package Level_1;
+
+import java.awt.Color;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class ColorTeacher
+{
+	JFrame Frame;
+	JPanel Panel;
+	JButton Yellow;
+	JButton Red;
+	JButton Blue;
+	JButton Green;
+	public static void main(String[] args)
+	{
+		ColorTeacher a = new ColorTeacher();
+	}
+	ColorTeacher()
+	{
+		Frame = new JFrame("Color Teacher");
+		Panel = new JPanel();
+		Yellow = new JButton();
+		Red = new JButton();
+		Blue = new JButton();
+		Green = new JButton();
+		
+		Frame.setVisible(true);
+		Frame.pack();
+		
+		Yellow.setBackground(Color.YELLOW);
+		Yellow.setOpaque(true);
+	}
+}
