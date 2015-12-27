@@ -5,7 +5,7 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class BE_Main extends JPanel
+public class BE_Main
 {
 	JFrame Frame;
 	gameobject entity;
@@ -18,12 +18,7 @@ public class BE_Main extends JPanel
 		Frame = new JFrame("Block Escape");
 		Frame.setVisible(true);
 		Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		entity = new gameobject(10, 10, 100, 100, "imgres.jpg");
-		Frame.add(this);
-		Frame.setSize(300,500);
-	}
-	public void paint(Graphics g)
-	{
-		entity.paint(g);
+		Frame.add(new GamePanel());
+		Frame.setSize(256,480);
 	}
 }

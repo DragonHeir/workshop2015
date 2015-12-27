@@ -23,7 +23,8 @@ public class gameobject
 		try
 		{
 			this.image = ImageIO.read(this.getClass().getResourceAsStream(image));
-		} catch (IOException e)
+		} 
+		catch (IOException e)
 		{
 			System.out.println("Error Loading Image");
 		}
@@ -31,5 +32,9 @@ public class gameobject
 	public void paint(Graphics g)
 	{
 		g.drawImage(image, x, y, width, height, null);
+	}
+	public void refresh()
+	{
+		y = y + 16;
 	}
 }
