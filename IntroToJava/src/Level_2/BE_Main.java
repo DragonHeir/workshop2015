@@ -19,6 +19,6 @@ public class BE_Main
 		Frame.setVisible(true);
 		Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Frame.add(new GamePanel());
-		Frame.setSize(256,480);
+		Frame.setSize(256,502);
 	}
 }

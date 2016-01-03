@@ -3,6 +3,7 @@ package Level_2;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Random;
 
 import javax.imageio.ImageIO;
 
@@ -36,5 +37,9 @@ public class gameobject
 	public void refresh()
 	{
 		y = y + 16;
+		if(y >= 480 - 16)
+		{
+			y = 480 - 16;
+		}
 	}
 }
