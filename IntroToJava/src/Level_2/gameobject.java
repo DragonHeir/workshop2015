@@ -1,6 +1,7 @@
 package Level_2;
 
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Random;
@@ -14,6 +15,7 @@ public class gameobject
 	int width;
 	int height;
 	BufferedImage image;
+	Rectangle cBox;
 
 	gameobject(int x, int y, int width, int height, String image)
 	{
@@ -29,6 +31,7 @@ public class gameobject
 		{
 			System.out.println("Error Loading Image");
 		}
+		cBox = new Rectangle(x, y, width, height);
 	}
 	public void paint(Graphics g)
 	{
@@ -41,5 +44,10 @@ public class gameobject
 		{
 			y = 480 - 16;
 		}
+		cBox.setBounds(x, y, width, height);
+	}
+	public Rectangle getBox()
+	{
+		return cBox;
 	}
 }
