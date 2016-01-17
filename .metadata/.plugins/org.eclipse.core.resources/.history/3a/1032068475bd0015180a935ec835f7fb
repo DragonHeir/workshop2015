@@ -82,12 +82,11 @@ public class GamePanel extends JPanel implements ActionListener
 				}
 				Rectangle r1 = blocks.get(i).getBox();
 				Rectangle r2 = blocks.get(j).getBox();
-				if (r1.intersects(r2) && blocks.get(j).getisFalling())
+				if (r1.intersects(r2) && blocks.get(i).getisFalling())
 				{
-					gameobject go = blocks.get(j);
+					gameobject go = blocks.get(i);
+					//go.setY(go.getY()-16);
 					go.setIsFalling(false);
-					blocks.get(i).setIsFalling(false);
-					go.setY(go.getY()-32);
 				}
 			}
 		}

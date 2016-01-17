@@ -72,12 +72,4 @@ public class gameobject
 	{
 		return y;
 	}
-	public void setIsFalling(boolean Falling)
-	{
-		isFalling = Falling;
-	}
-	public boolean getisFalling()
-	{
-		return isFalling;
-	}
 }

@@ -16,7 +16,6 @@ public class gameobject
 	int height;
 	BufferedImage image;
 	Rectangle cBox;
-	boolean isFalling;
 
 	gameobject(int x, int y, int width, int height, String image)
 	{
@@ -24,7 +23,6 @@ public class gameobject
 		this.y = y;
 		this.width = width;
 		this.height = height;
-		isFalling = true;
 		try
 		{
 			this.image = ImageIO.read(this.getClass().getResourceAsStream(image));
@@ -41,14 +39,10 @@ public class gameobject
 	}
 	public void refresh()
 	{
-		if (isFalling)
-		{
 		y = y + 16;
 		if(y >= 480 - 16)
 		{
 			y = 480 - 16;
-			isFalling = false;
-		}
 		}
 		cBox.setBounds(x, y, width, height);
 	}
@@ -71,13 +65,5 @@ public class gameobject
 	public int getY()
 	{
 		return y;
-	}
-	public void setIsFalling(boolean Falling)
-	{
-		isFalling = Falling;
-	}
-	public boolean getisFalling()
-	{
-		return isFalling;
 	}
 }

@@ -76,8 +76,4 @@ public class gameobject
 	{
 		isFalling = Falling;
 	}
-	public boolean getisFalling()
-	{
-		return isFalling;
-	}
 }
