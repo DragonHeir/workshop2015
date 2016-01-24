@@ -13,7 +13,7 @@ import javax.swing.Timer;
 
 public class GamePanel extends JPanel implements ActionListener
 {
-	boolean isFalling = true;
+	boolean isFalling;
 	int x = 5;
 	int blockcounter = 0;
 	Timer blocktimer;
@@ -31,7 +31,7 @@ public class GamePanel extends JPanel implements ActionListener
 	{
 		bg = new gameobject(0, 0, 256, 480, "Background.png");
 		blocks = new ArrayList<gameobject>();
-		blocktimer = new Timer(1000/6, this);
+		blocktimer = new Timer(1000/20, this);
 		blocktimer.start();
 	}
 	@Override
@@ -68,7 +68,7 @@ public class GamePanel extends JPanel implements ActionListener
 	}
 	boolean isFalling()
 	{
-		return true;
+		return isFalling;
 	}
 	public void checkCollision()
 	{
@@ -82,12 +82,12 @@ public class GamePanel extends JPanel implements ActionListener
 				}
 				Rectangle r1 = blocks.get(i).getBox();
 				Rectangle r2 = blocks.get(j).getBox();
-				if (r1.intersects(r2) && blocks.get(j).getisFalling())
+				if (r1.intersects(r2)&& blocks.get(j).getisFalling())
 				{
+					System.out.println("test");
 					gameobject go = blocks.get(j);
-					go.setIsFalling(false);
-					blocks.get(i).setIsFalling(false);
 					go.setY(go.getY()-32);
+					go.setIsFalling(false);
 				}
 			}
 		}

@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
@@ -79,5 +80,16 @@ public class gameobject
 	public boolean getisFalling()
 	{
 		return isFalling;
+	}
+	public boolean checkcoords(int x, int y, ArrayList <gameobject> blocks)
+	{
+	for (gameobject b: blocks)
+	{
+		if(b.getX()== x && b.getY()== y)
+		{
+			return true;
+		}
+	}
+	return false;
 	}
 }
