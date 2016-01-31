@@ -17,7 +17,7 @@ public class gameobject
 	int height;
 	BufferedImage image;
 	Rectangle cBox;
-	boolean isFalling;
+	boolean isFalling = true;
 
 	gameobject(int x, int y, int width, int height, String image)
 	{
@@ -45,11 +45,11 @@ public class gameobject
 		if (isFalling)
 		{
 		y = y + 16;
-		if(y >= 480 - 16)
-		{
-			y = 480 - 16;
-			isFalling = false;
 		}
+		if(y >= 200 - 16)
+		{
+			y = 200 - 16;
+			isFalling = false;
 		}
 		cBox.setBounds(x, y, width, height);
 	}
@@ -73,9 +73,9 @@ public class gameobject
 	{
 		return y;
 	}
-	public void setIsFalling(boolean Falling)
+	public void setIsFalling(boolean b)
 	{
-		isFalling = Falling;
+		isFalling = b;
 	}
 	public boolean getisFalling()
 	{
@@ -92,4 +92,23 @@ public class gameobject
 	}
 	return false;
 	}
+	boolean isFalling()
+	{
+		return isFalling;
+	}
+	public void checkCollision(ArrayList<gameobject> list)
+	{
+		for(gameobject b : list){
+			if(cBox.intersects(b.getBox())){
+				if(equals(b)){
+					System.out.println("Falling");
+					continue;
+				}
+				isFalling = false;
+				y = y - 16;
+				System.out.println("Not Falling");
+			}
+	}
+
+}
 }

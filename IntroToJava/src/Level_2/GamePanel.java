@@ -39,18 +39,17 @@ public class GamePanel extends JPanel implements ActionListener
 	{
 		for (gameobject block:blocks)
 		{
+			block.checkCollision(blocks);
 			block.refresh();
-
 		}
 		repaint();
 		blockLogic();
-		checkCollision();
 	}
 	int block()
 	{
 		Random r = new Random();
-		int x = r.nextInt(16);
-		x = x * 16;
+		int x = r.nextInt(1);
+		x = x*1;
 		return x;
 	}
 	public void addBlock()
@@ -62,34 +61,12 @@ public class GamePanel extends JPanel implements ActionListener
 		if (blockcounter == 5)
 		{
 			addBlock();
-			blockcounter = 0;
+			
+		}
+		if (blockcounter == 10)
+		{
+			addBlock();
 		}
 		blockcounter++;
-	}
-	boolean isFalling()
-	{
-		return isFalling;
-	}
-	public void checkCollision()
-	{
-		for (int i = 0; i < blocks.size(); i++)
-		{
-			for (int j = 0; j < blocks.size(); j++)
-			{
-				if (i == j)
-				{
-					continue;
-				}
-				Rectangle r1 = blocks.get(i).getBox();
-				Rectangle r2 = blocks.get(j).getBox();
-				if (r1.intersects(r2)&& blocks.get(j).getisFalling())
-				{
-					System.out.println("test");
-					gameobject go = blocks.get(j);
-					go.setY(go.getY()-32);
-					go.setIsFalling(false);
-				}
-			}
-		}
 	}
 }
