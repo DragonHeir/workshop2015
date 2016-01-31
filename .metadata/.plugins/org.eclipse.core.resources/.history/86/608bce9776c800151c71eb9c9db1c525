@@ -104,8 +104,8 @@ public class gameobject
 					System.out.println("Falling");
 					continue;
 				}
-				y = y - 8;
 				isFalling = false;
+				y = y - 16;
 				System.out.println("Not Falling");
 			}
 	}
